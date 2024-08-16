@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifications",
+  "info": {
+    "name": "notifications",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "notificationID": {
+      "type": "uid"
+    },
+    "message": {
+      "type": "richtext"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "employee": {
+      "via": "notifications",
+      "model": "employee"
+    },
+    "user": {
+      "model": "users",
+      "via": "notifications"
+    }
+  }
+}

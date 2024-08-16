@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users",
+  "info": {
+    "name": "users"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "password"
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "Employee",
+        "Administrator"
+      ]
+    },
+    "userID": {
+      "type": "uid"
+    },
+    "name": {
+      "type": "string"
+    },
+    "reports": {
+      "via": "users",
+      "collection": "report"
+    },
+    "employee": {
+      "via": "user",
+      "model": "employee"
+    },
+    "notifications": {
+      "via": "user",
+      "collection": "notifications"
+    },
+    "token": {
+      "via": "user",
+      "model": "token"
+    }
+  }
+}

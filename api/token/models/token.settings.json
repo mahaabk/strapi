@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tokens",
+  "info": {
+    "name": "token"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "token": {
+      "type": "richtext"
+    },
+    "user": {
+      "model": "users",
+      "via": "token"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees",
+  "info": {
+    "name": "employee",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "model": "users",
+      "via": "employee"
+    },
+    "notifications": {
+      "via": "employee",
+      "collection": "notifications"
+    }
+  }
+}
